@@ -53,7 +53,7 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 
 ## License
 
-Distributed under the MIT License. See \`LICENSE\` for more information.
+Distributed under the MIT License.
 
 ## Contact
 
