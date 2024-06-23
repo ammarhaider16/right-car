@@ -1,9 +1,9 @@
 import OpenAI from "openai";
-import OPENAI_APIKEY from "./API_KEY.js";
 import { userContentGenerator } from "../utils/userContentGenerator.js";
+import APIKEY from "./key.js"
 
 const openai = new OpenAI({
-  apiKey: OPENAI_APIKEY,
+  apiKey: APIKEY,
   dangerouslyAllowBrowser: true,
 });
 
