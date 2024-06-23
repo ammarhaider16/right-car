@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+LOGO BACKGROUND: #E87D22 
+LOGO ICON: #762A0C
+*/
+
+body {
+    background-color: #762A0C;
+    /* Optionally, you can add more styles for the body */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    font-family: Poppins;
+  }
+  
+
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #E87D22;
+    color: #762A0C;
+    border: 2px solid #762A0C;
+    border-radius: 20px;
+    font-family: Playfair Display;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .button:hover {
+    background-color: #762A0C;
+    color: #E87D22;
+  }
+  
+  .intro-container {
+    display: block;
+    height: 100vh;
+    align-items: center; 
+    text-align: center;
+  }
+  
+  .intro-container-textbox {
+    font-size: 10vh;
+    flex: 1; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#E87D22;
+    font-family:Playfair Display
+  }
+  
+  .info-container {
+    background-color: #E87D22;
+    color: #762A0C;
+    border-radius: 15px; 
+    padding: 20px; 
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 2.5vh;
+    margin: 3vw;
+    border-width: 5px;
+    border-color: #762A0C;
+  }
+  
+  
+  @media (min-width: 768px) {
+    .intro-container-textbox {
+      font-size: 15vh;
+    }
+    
+    .info-container {
+      margin-left: 3vw;
+      max-width: 722px;
+      transform: translateY(-100px);
+    }
+  }
