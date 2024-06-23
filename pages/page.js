@@ -29,18 +29,20 @@ export default function Home() {
         <div className="info-container">
           <div>
             <p style={{ fontSize: "3.5vh", fontWeight: "bold" }}>
-              find the Right Car with our AI
+              find the Right Car with the power of AI
             </p>
-            <p>
+            <p style={{ color: "#FFFFF0" }}>
               With over 400+ models on sale today, it is hard to make a choice.
               Our AI simplifies everything for you.
             </p>
           </div>
-          <button
-            className="button"
-            style={{ marginTop: "20px", fontFamily: "Poppins" }}>
-            <Link href="/generate">Get Started</Link>
-          </button>
+          <Link href="/generate">
+            <button
+              className="button"
+              style={{ marginTop: "20px", fontFamily: "Poppins" }}>
+              get started
+            </button>
+          </Link>
         </div>
       </div>
     </div>

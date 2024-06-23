@@ -15,7 +15,7 @@ export const userContentGenerator = (
     resultParts.push(`location: ${location}`);
   }
   if (budget !== null && budget !== "") {
-    resultParts.push(`budget: ${budget}`);
+    resultParts.push(`budget: USD ${budget}`);
   }
   if (purpose !== null && purpose !== "") {
     resultParts.push(`purpose: ${purpose}`);

@@ -4,7 +4,7 @@ const Footer = () => {
       style={{
         backgroundColor: "#E87D22",
         color: "#762A0C",
-        fontFamily: "Poppins",
+        fontFamily: "Playfair Display",
         padding: "20px",
       }}>
       <p>© 2024 Ammar Haider</p>

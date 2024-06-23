@@ -13,14 +13,14 @@ const Header = () => {
         alignItems: "center",
       }}>
       <div>
-        <Link href="/">
+        <Link href="/page">
           <Image src="/logo.svg" alt="Logo" width={200} height={40} />
         </Link>
       </div>
       <div>
-        <button className="button">
-          <a href="mailto:ammarhaider1629@gmail.com"> Contact Us</a>
-        </button>
+        <a href="mailto:ammarhaider1629@gmail.com">
+          <button className="button">Contact Us</button>
+        </a>
       </div>
     </header>
   );

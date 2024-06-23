@@ -9,7 +9,6 @@ LOGO ICON: #762A0C
 
 body {
     background-color: #762A0C;
-    /* Optionally, you can add more styles for the body */
     margin: 0; /* Removes default margin */
     padding: 0; /* Removes default padding */
     font-family: Poppins;
@@ -67,7 +66,96 @@ body {
     border-width: 5px;
     border-color: #762A0C;
   }
+
+  .form-container {
+    background-color: #E87D22;
+    color: #762A0C;
+    border-radius: 15px; 
+    padding: 20px; 
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 2.5vh;
+    margin: 3vw;
+    border-width: 5px;
+    border-color: #762A0C;
+  }
   
+  .form-input {
+    background-color: #E87D22;
+    border: none;
+    border-bottom: 2px solid #762A0C;
+    color: #762A0C; 
+    padding: 8px;
+    outline: none;
+    transition: border-bottom-color 0.3s ease border-bottom-width 0.3s ease;
+    width: 150px;
+  }
+  
+  .form-input:hover,
+  .form-input:focus {
+    border-bottom-color: #FCA350; 
+    border-bottom-width: 3.5px;
+  }
+  
+  .form-input::placeholder {
+    color: rgba(118, 42, 12, 0.6);
+  }
+  
+  .form-input-longer {
+    background-color: #E87D22;
+    border: none;
+    border-bottom: 2px solid #762A0C;
+    color: #762A0C; 
+    padding: 8px;
+    outline: none;
+    transition: border-bottom-color 0.3s ease border-bottom-width 0.3s ease;
+    width: 75vw;
+  }
+  
+  .form-input-longer:hover,
+  .form-input-longer:focus {
+    border-bottom-color: #FCA350; 
+    border-bottom-width: 3.5px;
+  }
+  
+  .form-input-longer::placeholder {
+    color: rgba(118, 42, 12, 0.6);
+  }
+
+  .input-label {
+    font-weight: bold;
+  }
+
+  .loading-text {
+    position: relative;
+    animation: flashing 2s infinite;
+}
+
+.result-description-text {
+  color: #FFFFF0;
+  margin-top: 1.5vh;
+  margin-left: 2.5vh;
+  font-size: 1.75vh;
+}
+
+.result-subtitle-text {
+  font-size: "3.5vh";
+  font-weight: "bold";
+  margin-top: "2.5vh",
+}
+
+@keyframes flashing {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
   
   @media (min-width: 768px) {
     .intro-container-textbox {
@@ -78,5 +166,18 @@ body {
       margin-left: 3vw;
       max-width: 722px;
       transform: translateY(-100px);
+    }
+
+    .form-container {
+      margin-left: 15vw;
+      margin-right: 15vw;
+    }
+
+    .form-input-longer {
+      width: 50vw;
+    }
+
+    .result-description-text {
+      font-size: 2.15vh;
     }
   }
