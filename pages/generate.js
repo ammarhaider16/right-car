@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FormComponent } from "../components/FormComponent.js";
 import { getRecommendationFromFormData } from "../utils/getRecommendationFromFormData.js";
+import Link from "next/link.js";
 
 export const Generate = () => {
   // Generator State Hooks
@@ -238,7 +239,7 @@ export const Generate = () => {
                 fontWeight: "bold",
                 marginTop: "2.5vh",
               }}>
-              here's why we think you'll like it..
+              here&#s why we think you&#ll like it..
             </p>
             <p className="result-description-text">{reason}</p>
 
@@ -279,19 +280,19 @@ export const Generate = () => {
                 fontWeight: "bold",
                 marginTop: "3vh",
               }}>
-              oops! something's not right
+              oops! something&#s not right
             </p>
             <p style={{ color: "#FFFFF0", marginTop: "3vh" }}>
               please check your details again, and contact us if the issue
               persists!
             </p>
-            <a href="/generate">
+            <Link href="/generate">
               <button
                 className="button"
                 style={{ marginTop: "5vh", fontFamily: "Poppins" }}>
                 retry
               </button>
-            </a>
+            </Link>
           </div>
         </>
       )}
