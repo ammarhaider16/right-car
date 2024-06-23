@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FormComponent } from "../components/FormComponent.js";
 import { getRecommendationFromFormData } from "../utils/getRecommendationFromFormData.js";
 
-export const generate = () => {
+export const Generate = () => {
   // Generator State Hooks
   const [showForm, setShowForm] = useState(true);
   const [showLoading, setShowLoading] = useState(false);
@@ -299,4 +299,4 @@ export const generate = () => {
   );
 };
 
-export default generate;
+export default Generate;
