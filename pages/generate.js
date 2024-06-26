@@ -23,6 +23,24 @@ export const Generate = () => {
   const [reason, setReason] = useState("");
   const [issues, setIssues] = useState("");
 
+  const updateStatesToDefault = () => {
+    setName("");
+    setReason("");
+    setIssues("");
+
+    setAge("");
+    setLocation("");
+    setBudget("");
+    setPurpose("");
+    setFuelType("");
+    setAdditionalInfo("");
+
+    setShowLoading(false);
+    setShowResult(false);
+    setShowErrorMessage(false);
+    setShowForm(true);
+  };
+
   const handleAgeChange = (e) => {
     setAge(e.target.value);
   };
@@ -66,29 +84,30 @@ export const Generate = () => {
       return;
     }
 
-    const recommendation = JSON.parse(stringRecommendation);
-    if (
-      recommendation["name"] != null &&
-      recommendation["reason"] != null &&
-      recommendation["issues"] != null
-    ) {
-      console.log(
-        recommendation["name"],
-        recommendation["reason"],
-        recommendation["issues"]
-      );
+    try {
+      const recommendation = JSON.parse(stringRecommendation);
+      if (
+        recommendation["name"] != null &&
+        recommendation["reason"] != null &&
+        recommendation["issues"] != null
+      ) {
 
-      // Update results data
-      setName(recommendation["name"]);
-      setReason(recommendation["reason"]);
-      setIssues(recommendation["issues"]);
+        // Update results data
+        setName(recommendation["name"]);
+        setReason(recommendation["reason"]);
+        setIssues(recommendation["issues"]);
 
-      // Update generator state
-      setShowLoading(false);
-      setShowResult(true);
-    } else {
+        // Update generator state
+        setShowLoading(false);
+        setShowResult(true);
+      } else {
+        setShowLoading(false);
+        setShowErrorMessage(true);
+      }
+    } catch (error) {
       setShowLoading(false);
       setShowErrorMessage(true);
+      return;
     }
   };
 
@@ -256,7 +275,8 @@ export const Generate = () => {
             <div style={{ textAlign: "center" }}>
               <button
                 className="button"
-                style={{ marginTop: "2.5vh", fontFamily: "Poppins" }}>
+                style={{ marginTop: "2.5vh", fontFamily: "Poppins" }}
+                onClick={updateStatesToDefault}>
                 want to try again?
               </button>
             </div>
@@ -286,13 +306,12 @@ export const Generate = () => {
               please check your details again, and contact us if the issue
               persists!
             </p>
-            <Link href="/generate">
-              <button
-                className="button"
-                style={{ marginTop: "5vh", fontFamily: "Poppins" }}>
-                retry
-              </button>
-            </Link>
+            <button
+              className="button"
+              style={{ marginTop: "5vh", fontFamily: "Poppins" }}
+              onClick={updateStatesToDefault}>
+              retry
+            </button>
           </div>
         </>
       )}

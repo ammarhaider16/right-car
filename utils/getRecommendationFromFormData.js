@@ -12,7 +12,6 @@ export const getRecommendationFromFormData = async (formData) => {
       fuelType,
       additionalInfo
     );
-    console.log(recommendation);
     return recommendation;
   } catch (err) {
     return null;
